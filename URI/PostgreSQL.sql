@@ -139,3 +139,44 @@ order by (score.math*2+score.specific*3+score.project_plan*5)/10 desc
 SELECT name, CAST(extract(day from payday) AS INT) as day FROM loan;
 
 -- 2140
+
+-- 2141
+select concat('Approved: ',name), grade from students 
+where grade >= 7
+order by grade desc
+
+-- 2142
+
+--2743
+select name, length(name) from people
+order by length(name) desc;
+
+--2744
+select id, password, MD5(password) from account
+
+--2745
+select name, round(salary*.1,2) from people
+where salary > 3000
+
+--2746
+select replace(name, 'H1', 'X') from virus;
+
+--2993
+SELECT amount AS most_frequent_value
+FROM value_table
+GROUP BY amount
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- 3482
+
+
+-- 3483
+(select city_name, population from cities
+order by population desc limit 1 offset 1)
+
+union all
+
+(select city_name, population from cities
+order by population asc limit 1 offset 1)
+
