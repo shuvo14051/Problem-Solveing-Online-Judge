@@ -1,0 +1,1 @@
+sum(sequence)//12
