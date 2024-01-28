@@ -1,17 +1,13 @@
-n = int(input())
-d = {}
-result = ""
+summ = int(input())
+li = [5, 4, 3, 2, 1]
+count = 0
+i = 0
 
-for _ in range(n):
-    code, rating = input().split()
-    d[code] = float(rating)
+while summ > 0 and i < len(li):
+    if summ >= li[i]:
+        count += 1
+        summ -= li[i]
+  
+    i += 1
 
-li = list(d.values())
-maxi = max(li)
-
-if maxi <= 8:
-    print("Minimum note not reached")
-else:
-    for key, value in d.items():
-        if value == maxi:
-            print(key)
+print(count)
