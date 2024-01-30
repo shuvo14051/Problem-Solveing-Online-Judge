@@ -1,11 +1,12 @@
-import numpy 
-n, m = map(int, input().split())
+n = int(input())
+dic = {}
+for i in range(n):
+    a, b = input().split()
+    dic[a] = b
 
-li = [[int(x) for x in input().split()] for _ in range(n)]
-
-a = numpy.array(a)
-a = numpy.reshape(a, (n,m))
-
-print (numpy.mean(a, axis = 1))
-print (numpy.var(a, axis = 0))
-print (numpy.std(a))
+for j in range(n):
+    name = input()
+    if name in dic:
+        print("{}={}".format(name, dic[name]))
+    else:
+        print("Not found")
