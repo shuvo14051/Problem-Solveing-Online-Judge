@@ -13,7 +13,7 @@ for i in range(1, n+1):
         result += "I love that "
 
 result = result.strip()
-print(result)
-replace = result[-4:]
-res = result.replace(replace, "it")
+split = result.split(" ")
+split[-1] = "it"
+res = " ".join(split)
 print(res)
