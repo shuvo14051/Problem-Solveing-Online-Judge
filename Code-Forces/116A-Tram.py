@@ -1,17 +1,10 @@
 n = int(input())
-left_values = []
-enter_values = []
-li = []
+li_s = []
+appned_item = 0
 for i in range(n):
-    left, enter = map(int, input().split())
-    left_values.append(left)
-    enter_values.append(enter)
+    li = list(map(int, input().split()))
+    summ = -1*(li [0]) + li[1] 
+    appned_item += summ
+    li_s.append(appned_item)
 
-for j in range(n-1):
-    first = enter_values[j] - left_values[j+1] + enter_values[j+1]
-    li.append(first)
-    li.append()
-    print(enter_values[j], left_values[j+1] , enter_values[j+1], enter_values[j] - left_values[j+1] + enter_values[j+1])
-
-# print(max(li))
-# print(li)
+print(max(li_s))

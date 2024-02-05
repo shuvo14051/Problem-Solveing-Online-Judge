@@ -11,7 +11,7 @@ for _ in range(test):
             tem = tem - 1
             if tem % 10 == 0:
                 result.append(tem)
-            n = tem
+            n = n //tem
             
             if n in li:
                 result.append(li[n])
