@@ -1,13 +1,14 @@
 test = int(input())
-base = "Timur"
-for _ in range(test):
+base = ''.join(sorted("Timur"))
+
+for i in range(test):
     n = int(input())
-    s = input()[:n]
-    for i in s:
-        if i not in base:
-            val = "NO"
-            break
-        val = "YES"
-    print(val)
-
-
+    name = input()
+    name = ''.join(sorted(name))
+    if len(name) != 5:
+        print("NO")
+    else:
+        if name == base:
+            print("YES")
+        else:
+            print("NO")
