@@ -1,1 +1,6 @@
-[0,1,2,2,3,0,4,2]
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s = s.strip()
+        li = s.split()
+        li2 = sorted(li, reverse=False)
+        return " ".join(x for x in li2)

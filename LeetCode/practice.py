@@ -1,7 +1,9 @@
-li = [1,2,3,4,5]
+from collections import Counter
 
-for i in range(0,len(li),2):
-    print(li[i])
+numbers = [1, 2, 3, 4, 1, 2, 3, 1, 1]
+counter = Counter(numbers)
 
-for i in range(1,len(li),2):
-    print(li[i])
+# Iterate over the counter and print counts of elements with duplicates
+for num, count in counter.items():
+    if count > 1:
+        print(f"{num} has {count} duplicates.")
