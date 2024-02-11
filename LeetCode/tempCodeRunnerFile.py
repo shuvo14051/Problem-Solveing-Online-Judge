@@ -1,2 +1,1 @@
-if i == 0:
-            #     nums.remove(0)
+["aaa","aaa","aaa","aaa"]
