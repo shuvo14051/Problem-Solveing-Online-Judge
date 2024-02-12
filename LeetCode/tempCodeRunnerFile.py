@@ -1,1 +1,2 @@
-["aaa","aaa","aaa","aaa"]
+      d[indices[i]] = s[i]
+        return d
