@@ -1,2 +1,1 @@
-      d[indices[i]] = s[i]
-        return d
+num_elements2 - num_elements

@@ -1,12 +1,11 @@
+from typing import List 
+from collections import Counter
+
 class Solution:
-    def uniqueOccurrences(self, arr):
-        occurance = set()
-        for i in arr:
-            occurance.add(arr.count(i))
-        if len(occurance) == 1:
-            return False
-        else:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        counter = Counter(arr)
+        values = counter.values()
+        set_values = set(values)
+        if len(set_values) == len(values):
             return True
-        
-s = Solution()
-print(s.uniqueOccurrences([1,2,3]))
+        return False
