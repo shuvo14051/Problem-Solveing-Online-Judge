@@ -1,1 +1,2 @@
-num_elements2 - num_elements
+    if s1 == s2:
+                count += 1
