@@ -1,7 +1,13 @@
-a = int(input())
-b = int(input())
+from collections import Counter
 
-X = a+b
-#this is another way of formatting
-# print("X = %d" %X)
-print("X = {}".format(X))
+while True:
+    try:
+        stirng = input().strip()
+        counter = Counter(stirng)
+        sorted_items = sorted(counter.items(), key=lambda item: (-item[1], ord(item[0])))
+        for key, value in sorted_items.items():
+            print(ord(key), value)
+        print()
+
+    except EOFError:
+        break
