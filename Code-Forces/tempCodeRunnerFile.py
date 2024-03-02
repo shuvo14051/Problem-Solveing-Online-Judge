@@ -1,2 +1,4 @@
- # elif li[i-1] == li[i]:
-        #     li.remove(li[i])
+test = int(input())
+
+for _ in range(test):
+    n = int(input())
