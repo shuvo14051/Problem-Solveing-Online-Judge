@@ -3,4 +3,7 @@ while True:
     if a == "0" and b == "0":
         break
     b = b.replace(a,"")
-    print(int(b))
+    if b == "":
+        print(0)
+    else:
+        print(int(b))
