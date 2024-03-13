@@ -9,35 +9,37 @@ class Solution:
         return False
     
     def isUgly(self, n: int) -> bool:
-        factors = []
-        remove_track = 0
-        if n <= 0:
+        if n<=0:
             return False
         if n == 1:
             return True
+        factors = []
+        prime_factors =[]
         for i in range(2, n):
-            if n%i == 0 and self.is_prime(i):
+            if n%i == 0:
                 factors.append(i)
-        # if len(factors) == 0:
-        #     return False
-        # print("All prime factors: ", factors)
-        if 2 in factors:
-            factors.remove(2)
-            remove_track += 1
-        if 3 in factors:
-            factors.remove(3)
-            remove_track += 1
-        if 5 in factors:
-            factors.remove(5)
-            remove_track += 1
+        
+        for i in factors:
+            if self.is_prime(i):
+                prime_factors.append(i)
+                
+        if not prime_factors:
+            return False
+        
+        if 2 in prime_factors:
+            prime_factors.remove(2)
+        if 3 in prime_factors:
+            prime_factors.remove(3)
+        if 5 in prime_factors:
+            prime_factors.remove(5)
 
-        # print("After removal: ", factors)
-        # print(remove_track)
-        if len(factors) == 0 and remove_track>=1:
-            return True
-        return False
+        if prime_factors:
+            return False
+        return True
+
+        
     
 s = Solution()
 
-print(s.isUgly(6))
+print(s.isUgly(1))
         
