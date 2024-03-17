@@ -1,5 +1,7 @@
 from typing import List 
 
+# Complexity is O(n^2). and time limit exceeded
+"""
 class Solution:
     def subarraysDivByK(self, nums: List[int], k: int) -> int:
         subarrays = []
@@ -12,6 +14,7 @@ class Solution:
             if sum(ar) % k == 0:
                 count += 1
         return count
+"""
 
-s = Solution()
-print(s.subarraysDivByK([1,2,3,4], 4))
+# s = Solution()
+# print(s.subarraysDivByK(nums = [5], k = 9))
