@@ -16,4 +16,4 @@ for _ in range(n):
     elif m == b:
         print("Beto ganhou")
     else:
-        print("Carlos ganhou")
+        print("Carlos ganhou") 
