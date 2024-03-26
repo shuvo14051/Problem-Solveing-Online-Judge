@@ -1,6 +1,7 @@
 from typing import List 
 
 class Solution:
+    # Time limit
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         count = 0
         for i in range(len(arr)-k+1):
