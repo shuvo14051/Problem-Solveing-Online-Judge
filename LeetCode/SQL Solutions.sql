@@ -11,3 +11,16 @@ join employee on project.employee_id = employee.employee_id
 group by project_id
 order by project.project_id
 
+-- 176 Second Height Salary
+SELECT COALESCE(
+    (SELECT DISTINCT salary AS SecondHighestSalary 
+     FROM Employee 
+     ORDER BY salary DESC 
+     OFFSET 1 LIMIT 1), 
+    NULL) AS SecondHighestSalary;
+
+-- 
+SELECT person.firstname, person.lastname, address.city, address.state
+FROM Person LEFT JOIN Address 
+ON person.personid = address.personid;
+
