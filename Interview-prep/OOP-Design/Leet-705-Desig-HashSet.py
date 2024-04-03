@@ -11,4 +11,3 @@ class MyHashSet:
 
     def contains(self, key: int) -> bool:
         key in self.values
-
