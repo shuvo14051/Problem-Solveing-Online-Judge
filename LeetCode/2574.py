@@ -4,8 +4,10 @@ class Solution:
     def leftRightDifference(self, nums: List[int]) -> List[int]:
         leftSum  = []
         rightSum = []
+        
         for i in range(len(nums)):
             leftSum.append(sum(nums[0:i]))
+        # reverse the array and do the same thing again
         nums.reverse()
         for i in range(len(nums)):
             rightSum.append(sum(nums[0:i]))
