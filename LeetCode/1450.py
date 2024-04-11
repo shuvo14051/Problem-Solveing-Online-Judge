@@ -5,9 +5,7 @@ class Solution:
         length = len(startTime)
         count = 0
         for i in range(length):
-            if endTime[i] >= queryTime:
-                count += 1
-            elif endTime[i] - startTime[i] >= queryTime:
+            if queryTime >= startTime[i] and endTime[i] >= queryTime:
                 count += 1
 
         return count

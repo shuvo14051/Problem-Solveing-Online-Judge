@@ -1,10 +1,11 @@
-# class Solution:
-#     def repeatedCharacter(self, s: str) -> str:
-#         for i in range(1, len(s)):
-#             if s[i-1] == s[i]:
-#                 return s[i]
-#             if s.count(s[i]) == 2:
-#                 return s[i]
+class Solution:
+    def repeatedCharacter(self, s: str) -> str:
+        set_of_word = set()
+        for char in s:
+            if char in set_of_word:
+                return char
+            else:
+                set_of_word.add(char)
             
-# s = Solution()
-# print(s.repeatedCharacter("hthg"))
+s = Solution()
+print(s.repeatedCharacter("acdavdr"))
