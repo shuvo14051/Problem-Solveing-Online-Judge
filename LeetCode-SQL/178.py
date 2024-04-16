@@ -1,4 +1,8 @@
-#################### RANK, DENSE_RANK, OVERRIDE #################
+################## Topics covered ################### 
+"""
+RANK, DENSE_RANK, OVERRIDE -----> SQL
+sort_values() rank() ----> Pandas
+"""
 
                      # PostgreSQL
 """
