@@ -1,11 +1,12 @@
-from itertools import combinations
+import itertools
 
 class Solution:
     def countVowelStrings(self, n: int) -> int:
-        base = ["a","e","i","o","u"]
-        pairs = combinations(base, n)
+      s = "aeiou"
+      out = list(itertools.combinations_with_replacement(s,n))
+      count = 0
+      for item in out:
+        if list(item) == sorted(item):
+          count+=1
 
-        return len(list(pairs))
-    
-s = Solution()
-print(s.countVowelStrings(33))
+      return count
