@@ -1,45 +1,49 @@
+
+
+
 class Solution:
-    def is_prime(self, n):
-        count = 0
-        for i in range(2, n):
-            if n%i == 0:
-                count += 1
-        if count == 0:
-            return True
-        return False
-    
     def isUgly(self, n: int) -> bool:
-        if n<=0:
+        if n <= 0:
             return False
-        if n == 1:
-            return True
-        factors = []
-        prime_factors =[]
-        for i in range(2, n):
-            if n%i == 0:
-                factors.append(i)
-        
-        for i in factors:
-            if self.is_prime(i):
-                prime_factors.append(i)
-                
-        if not prime_factors:
-            return False
-        
-        if 2 in prime_factors:
-            prime_factors.remove(2)
-        if 3 in prime_factors:
-            prime_factors.remove(3)
-        if 5 in prime_factors:
-            prime_factors.remove(5)
-
-        if prime_factors:
-            return False
-        return True
-
-        
+        for p in [2, 3, 5]:
+            while n % p == 0:
+                n //= p
+        return n == 1
     
 s = Solution()
+print(s.isUgly(2))
 
-print(s.isUgly(1))
-        
+
+# time limit
+# class Solution:
+#     def is_prime(self, n):
+#         count = 0
+#         for i in range(2, n):
+#             if n%i == 0:
+#                 count += 1
+#         if count == 0:
+#             return True
+#         return False
+    
+#     def isUgly(self, n: int) -> bool:
+#         if n<=0:
+#             return False
+#         if n == 1 or n==2:
+#             return True
+#         prime_factors =[]
+#         for i in range(2, n+1):
+#             if n%i == 0 and self.is_prime(i):
+#                 prime_factors.append(i)
+
+#         # print(prime_factors)
+#         if len(prime_factors) == 0:
+#             return False
+#         else:
+#             for i in prime_factors:
+#                 if i not in [2,3,5]:
+#                     return False
+            
+#         return True
+
+# s = Solution()
+# print(s.isUgly(2))

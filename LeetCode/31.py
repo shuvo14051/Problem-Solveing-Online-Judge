@@ -7,12 +7,14 @@
 #         Do not return anything, modify nums in-place instead.
 #         """
 #         perm = list(permutations(sorted(nums)))
-#         print(perm)
 #         index_of_nums = perm.index(tuple(nums))
 #         if index_of_nums == len(perm)-1:
 #             nums[:] = perm[0]
 #         else:
 #             nums[:] = perm[index_of_nums+1]
 
+#         print(nums)
+#         print(perm)
+
 # s = Solution()
-# s.nextPermutation([1,3,2])
+# s.nextPermutation([1,5,1])
