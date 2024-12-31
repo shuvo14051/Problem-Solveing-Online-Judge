@@ -17,3 +17,5 @@ class Solution:
 
 s = Solution()
 print(s.equalFrequency("aazz"))
+
+

@@ -147,6 +147,19 @@ order by grade desc
 
 -- 2142
 
+
+-- 2740
+SELECT 
+    CASE 
+        WHEN position <= 3 THEN 'Podium: ' || team
+        WHEN position >= 14 THEN 'Demoted: ' || team
+    END AS name
+FROM 
+    league
+	
+WHERE 
+    position <= 3 OR position >= 14;
+    
 --2743
 select name, length(name) from people
 order by length(name) desc;
